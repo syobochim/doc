@@ -44,7 +44,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'doc'
+project = u'アーキMEMO'
 copyright = u'2015, syobochim'
 
 # The version info for the project you're documenting, acts as replacement for

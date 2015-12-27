@@ -5,6 +5,7 @@
 
 .. toctree::
    :maxdepth: 2
+   :numbered:
 
    pgBase/index
    pgBase/Git/index
