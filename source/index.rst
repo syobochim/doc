@@ -44,6 +44,6 @@ syobochim-doc
 
 おねがい
 ====
-本ドキュメントを読んで、気づいたことやフィードバックなどあれば、次のURLから、issue登録いただきたいです。
+本ドキュメントを読んで気づいたことやフィードバックなどあれば、次のURLからissue登録いただきたいです。
 
 [issue登録先](https://github.com/syobochim/doc/issues)
