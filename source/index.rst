@@ -40,3 +40,10 @@ syobochim-doc
 
    pgBase/index
    pgBase/Git/index
+
+
+おねがい
+====
+本ドキュメントを読んで、気づいたことやフィードバックなどあれば、次のURLから、issue登録いただきたいです。
+
+[issue登録先](https://github.com/syobochim/doc/issues)
