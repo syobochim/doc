@@ -47,5 +47,4 @@ syobochim-doc
 ====
 本ドキュメントを読んで気づいたことやフィードバックなどあれば、次のURLからissue登録いただきたいです。
 
-[issue登録先](https://github.com/syobochim/doc/issuess)
-
+`issue登録先 <https://github.com/syobochim/doc/issues>`_
