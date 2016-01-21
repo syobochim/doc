@@ -49,6 +49,7 @@ syobochim-doc
 
    pgBase/index
    pgBase/Git/index
+   pgBase/itPhase/index
 
 
 おねがい
