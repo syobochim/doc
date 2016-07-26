@@ -6,31 +6,33 @@ PG・UT中のソースコード管理の流れを以下に記載します。
 
 .. image:: img/all.png
 
-使用技術
+使用ツール
 ========
 
-- バージョン管理はGit / GitBucketを使用します。
-- ビルドツールおよびライブラリ管理はmaven / Artifactoryを使用します。
-- CIはJenkinsを使用します。
-- ソースコードの品質監視にはSonarQubeを使用します。
+- バージョン管理：Git / GitBucket
+- ビルドツール：maven
+- ライブラリ管理：Artifactory
+- CI：Jenkins
+- ソースコードの品質監視：SonarQube
 
-ソースコード管理の流れ
+開発フロー
 ----------------------
 
-1. 開発PCにてソースコードを変更し、gitにてバージョン管理を行います。
-2. 開発者はソースコードをGitBucketにpushし、GitBucketにてソースコードのバージョン管理を行います。
-3. **Jenkins** はGitBucketから最新のソースコードを取得し、アプリケーションが常に動作する状態か監視します。
-4. Jenkinsと **SonarQube** が連携されており、ソースコードの品質を常に監視しています。
-5. Jenkinsから各モジュールをライブラリ(jar)として **Artifactory** に格納することで、開発者は最新のモジュールを取得することが出来ます。
+1. 開発者は最新のソースコードをGitBucketから取得する。
+2. mavenを使用して、プロジェクトが依存するライブラリをArtifactoryから取得し、依存関係を解決する。
+3. プログラムを修正し、gitにてバージョン管理(commit)する。
+4. 修正したプログラムをGitBucketにpushする。
+5. JenkinsはGitBucketから最新のソースコードを取得し、アプリケーションが常に動作する状態か監視する。
+6. JenkinsとSonarQubeは連携されており、ソースコードの品質を常に監視する。
+7. Jenkinsは、各リポジトリのソースをライブラリ(jar)として **Artifactory** に格納する。
 
 .. note::
 
    * Jenkinsはテスト・ビルドを実行します。
-   * Jenkinsにて監視しているのはmasterブランチとdevelopブランチです。
-   * SonarQubeはソースコードの複雑度の計測やコーディングチェックなどを行い、視覚化します。
-   * SonarQubeにて監視しているのはmasterブランチとdevelopブランチです。
+   * Jenkinsの監視対象はmasterブランチとdevelopブランチです。
+   * SonarQubeはソースコードの複雑度の計測やコーディングチェックなどを行い、結果を視覚化します。
+   * SonarQubeの監視対象はmasterブランチとdevelopブランチです。
    * Artifactoryはjarをライブラリとして管理することが出来ます。
-   * アーキチームやDBAの管理ソースは、ライブラリ(jar)として提供されます。
 
 Gitについて
 ===========
